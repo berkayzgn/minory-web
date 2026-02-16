@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { TrustedByStrip } from "./TrustedByStrip";
 
 /** Görsel yüklenirse ekranı kaplar, yoksa/404 ise arka plandaki mock arayüz görünür */
 function PhoneScreenImage({
@@ -211,7 +210,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      <TrustedByStrip />
     </section>
   );
 }
