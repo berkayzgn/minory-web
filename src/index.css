@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);
+}
+
+@keyframes float-front {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-back {
+  0%, 100% { transform: translate(40px, 40px); }
+  50% { transform: translate(40px, 30px); }
+}
+
+.animate-float-front {
+  animation: float-front 6s ease-in-out infinite;
+}
+
+.animate-float-back {
+  animation: float-back 7s ease-in-out infinite;
+}

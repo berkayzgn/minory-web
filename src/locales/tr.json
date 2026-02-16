@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "brand": "Minory",
+    "features": "Özellikler",
+    "studio": "Stüdyo",
+    "pricing": "Fiyatlandırma",
+    "support": "Destek"
+  },
+  "hero": {
+    "title": "Minory",
+    "titleStudio": "Studio",
+    "subtitle1": "Tüm Müzik Araçlarınız Tek Stüdyoda.",
+    "subtitle2": "Modern sanatçı için profesyonel hassasiyet.",
+    "ctaAppStore": "App Store'dan İndir",
+    "ctaExplore": "Özellikleri Keşfet",
+    "appStoreNote1": "Ücretsiz indir. Hesap gerektirmez.",
+    "appStoreNote2": "Mikrofon erişimi yalnızca akort için kullanılır.",
+    "phoneBack": {
+      "studioMix": "Stüdyo Miks",
+      "eq": "EQ",
+      "rec": "Kayıt",
+      "keys": "Tuşlar"
+    },
+    "phoneFront": {
+      "myProjects": "Projelerim",
+      "activeSessions": "3 aktif oturum",
+      "live": "CANLI",
+      "projectName": "Neon Nights",
+      "projectMeta": "Elektronik • 128 BPM",
+      "tools": "Araçlar",
+      "seeAll": "Tümünü Gör",
+      "metronome": "Metronom",
+      "metronomeDesc": "Hassas tempo",
+      "tuner": "Akort",
+      "tunerDesc": "Kromatik",
+      "chords": "Akorlar",
+      "chordsDesc": "Kütüphane",
+      "drums": "Bateri",
+      "drumsDesc": "Sekansör"
+    }
+  },
+  "trustedBy": {
+    "label": "Sanatçılar tarafından tercih ediliyor"
+  },
+  "footer": {
+    "copyright": "© 2026 Minory Studio. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "contact": "İletişim",
+    "instagram": "Instagram"
+  }
+}

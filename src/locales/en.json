@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "brand": "Minory",
+    "features": "Features",
+    "studio": "Studio",
+    "pricing": "Pricing",
+    "support": "Support"
+  },
+  "hero": {
+    "title": "Minory",
+    "titleStudio": "Studio",
+    "subtitle1": "All Your Music Tools in One Studio.",
+    "subtitle2": "Professional grade precision for the modern artist.",
+    "ctaAppStore": "Download on App Store",
+    "ctaExplore": "Explore Features",
+    "appStoreNote1": "Free download. No account required.",
+    "appStoreNote2": "Microphone access only for tuner precision.",
+    "phoneBack": {
+      "studioMix": "Studio Mix",
+      "eq": "EQ",
+      "rec": "Rec",
+      "keys": "Keys"
+    },
+    "phoneFront": {
+      "myProjects": "My Projects",
+      "activeSessions": "3 active sessions",
+      "live": "LIVE",
+      "projectName": "Neon Nights",
+      "projectMeta": "Electronic • 128 BPM",
+      "tools": "Tools",
+      "seeAll": "See All",
+      "metronome": "Metronome",
+      "metronomeDesc": "Precision timing",
+      "tuner": "Tuner",
+      "tunerDesc": "Chromatic",
+      "chords": "Chords",
+      "chordsDesc": "Library",
+      "drums": "Drums",
+      "drumsDesc": "Sequencer"
+    }
+  },
+  "trustedBy": {
+    "label": "Trusted by artists from"
+  },
+  "footer": {
+    "copyright": "© 2026 Minory Studio. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact",
+    "instagram": "Instagram"
+  }
+}
