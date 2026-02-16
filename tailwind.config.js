@@ -9,8 +9,13 @@ export default {
     extend: {
       colors: {
         primary: "#5e35b1",
+        "primary-50": "#ede7f6",
+        "primary-100": "#d1c4e9",
+        "primary-900": "#311b92",
         "background-light": "#f7f6f8",
         "background-dark": "#17141e",
+        "surface-light": "#ffffff",
+        "surface-dark": "#1f1b29",
         "neutral-50": "#faf9fc",
         "neutral-100": "#f3f1f6",
         "neutral-200": "#e5e1eb",
@@ -34,6 +39,8 @@ export default {
         full: "9999px",
       },
       boxShadow: {
+        soft: "0 10px 40px -10px rgba(94, 53, 177, 0.08)",
+        "soft-hover": "0 20px 50px -12px rgba(94, 53, 177, 0.15)",
         "soft-xl": "0 20px 40px -10px rgba(94, 53, 177, 0.15)",
         float: "0 30px 60px -12px rgba(0, 0, 0, 0.12)",
       },

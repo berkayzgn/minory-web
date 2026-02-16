@@ -4,7 +4,11 @@
     "features": "Özellikler",
     "studio": "Stüdyo",
     "pricing": "Fiyatlandırma",
-    "support": "Destek"
+    "support": "Destek",
+    "metronome": "Metronom",
+    "tuner": "Tuner",
+    "repertoire": "Repertuar",
+    "chordsLibrary": "Akor Kütüphanesi"
   },
   "hero": {
     "title": "Minory",
@@ -41,6 +45,36 @@
   },
   "trustedBy": {
     "label": "Sanatçılar tarafından tercih ediliyor"
+  },
+  "featuresSection": {
+    "eyebrow": "Hassas Araçlar",
+    "title": "İhtiyacın olan her şey",
+    "titleBreak": "ustalığını geliştirmek için.",
+    "subtitle": "Çalışma odasından sahneye, Minory Studio modern müzisyen için tasarlanmış profesyonel araçlar sunar. Karmaşa yok, sadece netlik.",
+    "tuner": {
+      "title": "Hassas Akort",
+      "desc": "Duyarlı strobe ekranı ile 0.1 sent hassasiyet. Gürültülü ortamlarda bile her enstrüman için ideal.",
+      "learnMore": "Daha fazla"
+    },
+    "metronome": {
+      "title": "Akıllı Metronom",
+      "desc": "Karmaşık poliritimler oluşturun, set listeleri kaydedin. Görsel vuruş göstergeleri tıklama olmadan ritimde kalmanızı sağlar.",
+      "learnMore": "Daha fazla"
+    },
+    "chords": {
+      "title": "Akor Kütüphanesi",
+      "desc": "İnteraktif perde tahtalarıyla 2.000'den fazla voicing keşfedin. Çalmadan önce nasıl ses çıkardığını duyun.",
+      "learnMore": "Daha fazla"
+    },
+    "repertoire": {
+      "title": "Repertuar Yöneticisi",
+      "desc": "Şarkılarınızı sahneye hazır set listelerine dönüştürün. Her parçaya söz, akor ve ses notları ekleyin.",
+      "learnMore": "Daha fazla"
+    },
+    "ctaTitle": "Pratiklerini yükseltmeye hazır mısın?",
+    "ctaSubtitle": "Binlerce profesyonel müzisyen günlük iş akışları için Minory Studio'ya güveniyor.",
+    "ctaDownload": "iOS için İndir",
+    "ctaPricing": "Fiyatları Görüntüle"
   },
   "footer": {
     "copyright": "© 2026 Minory Studio. Tüm hakları saklıdır.",

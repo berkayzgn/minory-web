@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const INSTAGRAM_URL = "https://www.instagram.com/minorystudio";
@@ -13,12 +14,12 @@ export function Footer() {
           {t("footer.copyright")}
         </p>
         <nav className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm">
-          <a
-            href="#privacy"
+          <Link
+            to="/privacy"
             className="text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             {t("footer.privacy")}
-          </a>
+          </Link>
           <span className="text-neutral-400 dark:text-neutral-500" aria-hidden="true">·</span>
           <a
             href="#terms"

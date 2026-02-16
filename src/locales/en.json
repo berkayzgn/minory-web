@@ -4,7 +4,11 @@
     "features": "Features",
     "studio": "Studio",
     "pricing": "Pricing",
-    "support": "Support"
+    "support": "Support",
+    "metronome": "Metronome",
+    "tuner": "Tuner",
+    "repertoire": "Repertoire",
+    "chordsLibrary": "Chords Library"
   },
   "hero": {
     "title": "Minory",
@@ -41,6 +45,36 @@
   },
   "trustedBy": {
     "label": "Trusted by artists from"
+  },
+  "featuresSection": {
+    "eyebrow": "Precision Tools",
+    "title": "Everything you need to",
+    "titleBreak": "master your craft.",
+    "subtitle": "From the practice room to the stage, Minory Studio provides professional-grade tools designed for the modern musician. No clutter, just clarity.",
+    "tuner": {
+      "title": "Precision Tuner",
+      "desc": "Accurate to 0.1 cents with a responsive strobe display. Perfect for any instrument, even in noisy environments.",
+      "learnMore": "Learn more"
+    },
+    "metronome": {
+      "title": "Smart Metronome",
+      "desc": "Create complex polyrhythms and save setlists. Visual beat indicators keep you locked in without the click.",
+      "learnMore": "Learn more"
+    },
+    "chords": {
+      "title": "Chord Library",
+      "desc": "Explore over 2,000 voicings with interactive fretboards. Hear how they sound before you play.",
+      "learnMore": "Learn more"
+    },
+    "repertoire": {
+      "title": "Repertoire Manager",
+      "desc": "Organize your songs into gig-ready setlists. Attach lyrics, chords, and audio notes to every track.",
+      "learnMore": "Learn more"
+    },
+    "ctaTitle": "Ready to elevate your practice?",
+    "ctaSubtitle": "Join thousands of professional musicians who trust Minory Studio for their daily workflow.",
+    "ctaDownload": "Download for iOS",
+    "ctaPricing": "View Pricing"
   },
   "footer": {
     "copyright": "© 2026 Minory Studio. All rights reserved.",
