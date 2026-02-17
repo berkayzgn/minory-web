@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MOBILE_BREAKPOINT_PX = 768;
+
 interface ScrollRevealProps {
   children: ReactNode;
   id?: string;
@@ -17,6 +19,8 @@ interface ScrollRevealProps {
   rotationEnd?: string;
   wordAnimationEnd?: string;
   as?: "h1" | "h2" | "h3" | "p" | "div";
+  /** Mobilde animasyonu kapatır; sadece metin gösterilir, scroll bölünmesi önlenir */
+  disableOnMobile?: boolean;
 }
 
 export default function ScrollReveal({
@@ -32,6 +36,7 @@ export default function ScrollReveal({
   rotationEnd = "bottom bottom",
   wordAnimationEnd = "bottom bottom",
   as: Component = "h2",
+  disableOnMobile = true,
 }: ScrollRevealProps) {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -50,6 +55,10 @@ export default function ScrollReveal({
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
+    if (disableOnMobile && typeof window !== "undefined" && window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT_PX - 1}px)`).matches) {
+      return;
+    }
 
     const scroller =
       scrollContainerRef?.current ?? (typeof window !== "undefined" ? window : null);
@@ -124,6 +133,7 @@ export default function ScrollReveal({
     rotationEnd,
     wordAnimationEnd,
     blurStrength,
+    disableOnMobile,
   ]);
 
   return (
