@@ -1,5 +1,21 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ScrollReveal from "./ScrollReveal";
+import { PhoneHero } from "./PhoneHero";
+
+const featureRoutes: Record<string, string> = {
+  tuner: "/tuner",
+  metronome: "/metronome",
+  chords: "/chords",
+  repertoire: "/repertoire",
+};
+
+const featureImages: Record<string, string> = {
+  tuner: "/tuner-dark.PNG",
+  metronome: "/metronome-light.PNG",
+  chords: "/chords-dark.PNG",
+  repertoire: "/repertoire-light.png",
+};
 
 const features = [
   { key: "tuner", icon: "speed" },
@@ -51,53 +67,44 @@ export function FeaturesSection() {
           {/* Feature Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {features.map(({ key, icon }) => (
-              <div
+              <Link
                 key={key}
                 id={`feature-${key}`}
-                className="feature-card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px]"
+                to={featureRoutes[key]}
+                className="feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px] cursor-pointer"
               >
-                <div className="p-8 lg:p-10 flex flex-col h-full z-10 relative">
+                <div className="p-8 lg:p-10 flex flex-col h-full relative z-20 max-w-[50%] min-w-0">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
                     <span className="material-icons-round text-2xl">{icon}</span>
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
                     {t(`featuresSection.${key}.title`)}
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-sm">
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-6 whitespace-pre-line max-w-[260px]">
                     {t(`featuresSection.${key}.desc`)}
                   </p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-primary font-semibold hover:text-primary-900 dark:hover:text-primary-100 transition-colors mt-auto mb-8 w-fit"
-                  >
+                  <span className="inline-flex items-center text-primary font-semibold group-hover/card:text-primary-900 dark:group-hover/card:text-primary-100 transition-colors mt-auto mb-8 w-fit">
                     {t(`featuresSection.${key}.learnMore`)}{" "}
                     <span className="material-icons-round text-sm ml-1">arrow_forward</span>
-                  </a>
+                  </span>
                 </div>
-                {/* Phone mockup */}
-                <div className="absolute bottom-0 right-0 w-3/4 md:w-2/3 h-2/3 flex items-end justify-end pr-2 pb-2 md:pr-4 md:pb-4">
-                  <div className="relative w-[130px] h-[260px] sm:w-[160px] sm:h-[320px] md:w-[200px] md:h-[400px] rounded-[1.5rem] sm:rounded-[2rem] bg-black border-[3px] sm:border-4 border-black shadow-2xl overflow-hidden flex-shrink-0">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2.5 w-8 sm:h-3 sm:w-10 bg-black rounded-b-md z-10" />
-                    <img
-                      src="/IMG_1813.PNG"
-                      alt=""
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
+                {/* Phone mockup - aynı model, sadece iç görsel kart özelliğine göre */}
+                <div className="absolute bottom-0 right-0 w-3/4 md:w-2/3 h-2/3 flex items-end justify-end pr-2 pb-2 md:pr-4 md:pb-4 z-0 origin-bottom-right transition-transform duration-300 ease-out group-hover/card:scale-105">
+                  <PhoneHero variant="card" src={featureImages[key]} alt="" imagePosition={key === "metronome" ? "50% -18%" : undefined} />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           {/* Bottom CTA */}
           <div className="mt-20 flex justify-center">
-            <div className="bg-surface-light dark:bg-surface-dark rounded-xl p-8 md:p-12 shadow-sm border border-neutral-200 dark:border-neutral-800 text-center w-full max-w-4xl relative overflow-hidden group">
+            <div className="bg-surface-light dark:bg-surface-dark rounded-xl py-5 px-6 md:py-6 md:px-8 shadow-sm border border-neutral-200 dark:border-neutral-800 text-center w-full max-w-4xl relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+              <div className="relative z-10 flex flex-col items-center gap-3 md:gap-4">
+                <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white">
                   {t("featuresSection.ctaTitle")}
                 </h3>
-                <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
+                <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base max-w-xl mx-auto leading-snug">
                   {t("featuresSection.ctaSubtitle")}
                 </p>
                 <div className="flex justify-center">
@@ -110,7 +117,7 @@ export function FeaturesSection() {
                       alt={t("featuresSection.ctaDownload")}
                       width={540}
                       height={540}
-                      className="h-24 sm:h-28 md:h-32 w-auto"
+                      className="h-28 sm:h-32 md:h-36 w-auto"
                     />
                   </a>
                 </div>

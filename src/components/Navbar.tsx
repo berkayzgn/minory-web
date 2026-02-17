@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import TextType from "./TextType";
 
@@ -6,6 +6,7 @@ const LANG_KEY = "minory-lang";
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
 
   const toggleLanguage = () => {
     const next = i18n.language === "en" ? "tr" : "en";
@@ -40,31 +41,60 @@ export function Navbar() {
         </Link>
         <div className="hidden sm:flex items-center justify-center gap-1 sm:gap-3 absolute left-1/2 -translate-x-1/2">
           <Link
+            to="/"
+            className={`inline-flex text-sm font-medium transition-colors py-2 px-2 ${
+              location.pathname === "/"
+                ? "text-primary font-semibold"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"
+            }`}
+          >
+            {t("nav.home")}
+          </Link>
+          <Link
             to="/metronome"
-            className="inline-flex text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors py-2 px-2"
+            className={`inline-flex text-sm font-medium transition-colors py-2 px-2 ${
+              location.pathname === "/metronome"
+                ? "text-primary font-semibold"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"
+            }`}
           >
             {t("nav.metronome")}
           </Link>
           <Link
             to="/tuner"
-            className="inline-flex text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors py-2 px-2"
+            className={`inline-flex text-sm font-medium transition-colors py-2 px-2 ${
+              location.pathname === "/tuner"
+                ? "text-primary font-semibold"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"
+            }`}
           >
             {t("nav.tuner")}
           </Link>
           <Link
             to="/repertoire"
-            className="inline-flex text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors py-2 px-2"
+            className={`inline-flex text-sm font-medium transition-colors py-2 px-2 ${
+              location.pathname === "/repertoire"
+                ? "text-primary font-semibold"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"
+            }`}
           >
             {t("nav.repertoire")}
           </Link>
           <Link
             to="/chords"
-            className="inline-flex text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors py-2 px-2"
+            className={`inline-flex text-sm font-medium transition-colors py-2 px-2 ${
+              location.pathname === "/chords"
+                ? "text-primary font-semibold"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"
+            }`}
           >
             {t("nav.chordsLibrary")}
           </Link>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tabular-nums">
+            {i18n.language === "en" ? "EN" : "TR"}
+          </span>
           <button
             type="button"
             onClick={toggleLanguage}
@@ -73,7 +103,6 @@ export function Navbar() {
             title={i18n.language === "en" ? "Türkçe" : "English"}
           >
             <span className="material-icons-round text-xl sm:text-2xl">language</span>
-            <span className="sr-only">{i18n.language === "en" ? "TR" : "EN"}</span>
           </button>
         </div>
       </div>

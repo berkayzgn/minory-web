@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 /** Görsel yüklenirse ekranı kaplar, yoksa/404 ise arka plandaki mock arayüz görünür */
@@ -22,6 +22,69 @@ function PhoneScreenImage({
       onLoad={() => setLoaded(true)}
       onError={() => setError(true)}
     />
+  );
+}
+
+/** Minory logo – SplashScreen ile aynı dalgalı halka (WavyCircle) */
+const SVG_SIZE = 240;
+const CENTER = SVG_SIZE / 2;
+
+function polar(r: number, angle: number, center: number) {
+  const a = (angle * Math.PI) / 180;
+  return {
+    x: center + r * Math.cos(a),
+    y: center + r * Math.sin(a),
+  };
+}
+
+function buildWavyCircle(
+  baseRadius: number,
+  amplitude: number,
+  frequency: number,
+  phase: number,
+  center: number
+): string {
+  let d = "";
+  for (let i = 0; i <= 360; i += 0.5) {
+    const r =
+      baseRadius + amplitude * Math.sin((i * frequency * Math.PI) / 180 + phase);
+    const { x, y } = polar(r, i, center);
+    d += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
+  }
+  return d + " Z";
+}
+
+function LogoMinory({ className }: { className?: string }) {
+  const rings = useMemo(() => {
+    const list: string[] = [];
+    for (let i = 0; i < 80; i++) {
+      list.push(buildWavyCircle(28 + i * 4.2, 1.5, 12, i * 0.35, CENTER));
+    }
+    return list;
+  }, []);
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`}
+      fill="none"
+      className={className}
+      aria-hidden
+    >
+      <g stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        {rings.map((d, i) => (
+          <path key={i} d={d} />
+        ))}
+      </g>
+      {/* Plak merkezi – SplashScreen ile aynı */}
+      <circle cx={CENTER} cy={CENTER} r={26} fill="currentColor" />
+      <circle
+        cx={CENTER}
+        cy={CENTER}
+        r={6}
+        fill="var(--logo-center-bg)"
+      />
+    </svg>
   );
 }
 
@@ -49,15 +112,12 @@ export function HeroSection() {
           <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-4">
             {t("featuresSection.subtitle")}
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-6">
             {t("hero.subtitle2")}
           </p>
-          <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 max-w-[280px] sm:max-w-none mt-2">
-            {t("hero.appStoreNote1")}
-          </p>
-          <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 max-w-[280px] sm:max-w-none">
-            {t("hero.appStoreNote2")}
-          </p>
+          <div className="flex justify-start text-black dark:text-black mt-2 w-[7.7rem] h-[7.7rem] sm:w-[9.9rem] sm:h-[9.9rem] md:w-[12.1rem] md:h-[12.1rem] overflow-hidden rounded-full flex-shrink-0">
+            <LogoMinory className="w-full h-full animate-spin-slow" />
+          </div>
         </div>
 
         {/* Sağ: Telefon mock'ları - responsive boyut ve konum */}
