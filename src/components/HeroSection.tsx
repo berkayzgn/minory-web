@@ -115,8 +115,10 @@ export function HeroSection() {
           <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-6">
             {t("hero.subtitle2")}
           </p>
-          <div className="flex justify-start text-black dark:text-black mt-2 w-[7.7rem] h-[7.7rem] sm:w-[9.9rem] sm:h-[9.9rem] md:w-[12.1rem] md:h-[12.1rem] overflow-hidden rounded-full flex-shrink-0">
-            <LogoMinory className="w-full h-full animate-spin-slow" />
+          <div className="flex w-full lg:w-auto justify-center lg:justify-start text-black dark:text-black mt-2">
+            <div className="w-[7.7rem] h-[7.7rem] sm:w-[9.9rem] sm:h-[9.9rem] md:w-[12.1rem] md:h-[12.1rem] overflow-hidden rounded-full flex-shrink-0">
+              <LogoMinory className="w-full h-full animate-spin-slow" />
+            </div>
           </div>
         </div>
 
