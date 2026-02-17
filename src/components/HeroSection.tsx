@@ -104,8 +104,8 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 sm:gap-12 lg:gap-16">
-        {/* Sol: metin + CTA */}
-        <div className="flex-1 text-left max-w-xl pt-2 sm:pt-4 lg:pt-0 min-w-0">
+        {/* Sol: metin + CTA - mobilde flex-1 yok, üst üste binme olmaz */}
+        <div className="lg:flex-1 text-left max-w-xl pt-2 sm:pt-4 lg:pt-0 min-w-0 shrink-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 sm:mb-6 leading-[1.15] text-neutral-900 dark:text-white">
             {t("hero.subtitle1")}
           </h1>
@@ -122,9 +122,9 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Sağ: Telefon mock'ları - mobilde touch sayfa scroll'una gitsin */}
-        <div className="flex-1 relative w-full max-w-[280px] sm:max-w-xl lg:max-w-2xl mx-auto lg:mx-0 h-[300px] sm:h-[380px] md:h-[500px] lg:h-[560px] flex justify-center items-start perspective-1000 overflow-visible min-h-0 touch-pan-y">
-          <div className="relative w-[260px] sm:w-[320px] translate-x-4 sm:translate-x-8 md:translate-x-12 lg:translate-x-20 pointer-events-none md:pointer-events-auto">
+        {/* Sağ: Telefon mock'ları - mobilde touch sayfa scroll'una gitsin, lg'de flex-1 */}
+        <div className="lg:flex-1 relative w-full max-w-[280px] sm:max-w-xl lg:max-w-2xl mx-auto lg:mx-0 h-[360px] sm:h-[440px] md:h-[520px] lg:h-[580px] flex justify-center items-start perspective-1000 overflow-visible touch-pan-y">
+          <div className="relative w-[260px] sm:w-[320px] sm:translate-x-8 md:translate-x-12 lg:translate-x-20 pointer-events-none md:pointer-events-auto">
           {/* Back Phone (Dark Mode) */}
           <div className="absolute z-10 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black shadow-2xl animate-float-back overflow-hidden translate-x-[-70px] translate-y-6 sm:translate-x-[-90px] sm:translate-y-7 md:translate-x-[-110px] md:translate-y-8 lg:translate-x-[-120px] lg:translate-y-8">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-14 sm:h-5 sm:w-20 bg-black rounded-b-lg sm:rounded-b-xl z-20" />
