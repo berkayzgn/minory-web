@@ -1,38 +1,18 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { FEATURES, featureImages } from "../constants/features";
 import ScrollReveal from "./ScrollReveal";
 import { PhoneHero } from "./PhoneHero";
-
-const featureRoutes: Record<string, string> = {
-  tuner: "/tuner",
-  metronome: "/metronome",
-  chords: "/chords",
-  repertoire: "/repertoire",
-};
-
-const featureImages: Record<string, string> = {
-  tuner: "/tuner-dark.PNG",
-  metronome: "/metronome-light.PNG",
-  chords: "/chords-dark.PNG",
-  repertoire: "/repertoire-light.png",
-};
-
-const features = [
-  { key: "tuner", icon: "speed" },
-  { key: "metronome", icon: "hourglass_empty" },
-  { key: "chords", icon: "library_music" },
-  { key: "repertoire", icon: "folder_special" },
-] as const;
 
 export function FeaturesSection() {
   const { t } = useTranslation();
 
   return (
-    <main className="flex-grow">
-      <section
-        id="features"
-        className="pt-14 pb-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark overflow-hidden"
-      >
+    <section
+      id="features"
+      className="flex-grow pt-14 pb-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark overflow-hidden"
+      aria-labelledby="features-heading"
+    >
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -50,7 +30,8 @@ export function FeaturesSection() {
               {t("featuresSection.eyebrow")}
             </ScrollReveal>
             <ScrollReveal
-              as="h1"
+              as="h2"
+              id="features-heading"
               baseOpacity={0.1}
               enableBlur
               baseRotation={3}
@@ -66,12 +47,13 @@ export function FeaturesSection() {
 
           {/* Feature Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {features.map(({ key, icon }) => (
+            {FEATURES.map(({ key, path, icon }) => (
               <Link
                 key={key}
                 id={`feature-${key}`}
-                to={featureRoutes[key]}
+                to={path}
                 className="feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px] cursor-pointer"
+                aria-label={`${t(`featuresSection.${key}.title`)} — ${t(`featuresSection.${key}.learnMore`)}`}
               >
                 <div className="p-8 lg:p-10 flex flex-col h-full relative z-20 max-w-[50%] min-w-0">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
@@ -127,7 +109,6 @@ export function FeaturesSection() {
             </div>
           </div>
         </div>
-      </section>
-    </main>
+    </section>
   );
 }

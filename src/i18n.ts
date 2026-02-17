@@ -20,4 +20,10 @@ i18n.use(initReactI18next).init({
   },
 });
 
+function setDocumentLang(lng: string) {
+  document.documentElement.lang = lng === "tr" ? "tr" : "en";
+}
+setDocumentLang(initialLang);
+i18n.on("languageChanged", setDocumentLang);
+
 export default i18n;

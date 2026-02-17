@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo, ReactNode, RefObject } from "react";
+import React, { useEffect, useRef, useMemo, ReactNode, RefObject } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface ScrollRevealProps {
   children: ReactNode;
+  id?: string;
   scrollContainerRef?: RefObject<HTMLElement>;
   enableBlur?: boolean;
   baseOpacity?: number;
@@ -20,6 +21,7 @@ interface ScrollRevealProps {
 
 export default function ScrollReveal({
   children,
+  id,
   scrollContainerRef,
   enableBlur = true,
   baseOpacity = 0.1,
@@ -126,7 +128,8 @@ export default function ScrollReveal({
 
   return (
     <Component
-      ref={containerRef as RefObject<HTMLElement>}
+      id={id}
+      ref={containerRef as React.RefObject<HTMLDivElement>}
       className={`my-5 ${containerClassName}`}
     >
       <span

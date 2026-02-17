@@ -93,8 +93,6 @@
       "instantResponseDesc": "Zero lag processing ensures what you play is instantly reflected on screen.",
       "darkMode": "Dark Mode Preview",
       "darkModeDesc": "Designed for dimly lit stages and late-night studio sessions. Easy on the eyes.",
-      "downloadNow": "Download Now",
-      "seeHowItWorks": "See how it works",
       "accuracy": "Accuracy",
       "rangeCap": "Range Cap",
       "latency": "Latency",
@@ -110,7 +108,6 @@
       "glowMode": "Signature Glow Mode",
       "glowModeNew": "New",
       "glowModeDesc": "Stay in the pocket even in loud environments. The screen pulses in sync with your beat, providing a clear visual cue when audio isn't enough.",
-      "exploreTiming": "Explore all timing tools",
       "efficiency": "Efficiency",
       "efficiencyDesc": "Low power mode enabled for extended sessions."
     },
@@ -123,8 +120,6 @@
       "voicingsDesc": "Accurate chord library for jazz, pop, rock, and classical. Multiple positions per chord.",
       "offline": "Full Offline Access",
       "offlineDesc": "Download the library once. Use it anywhere—rehearsal, stage, or practice room—no connection needed.",
-      "downloadNow": "Download Now",
-      "seeHowItWorks": "See how it works",
       "voicingsStatValue": "Hundreds",
       "voicingsStat": "Chords",
       "instrumentsStat": "Instruments",
@@ -143,8 +138,7 @@
       "feature3Title": "Format your song",
       "feature3Desc": "Copy, paste, edit instantly.",
       "feature4Title": "Offline Mode",
-      "feature4Desc": "Perform anywhere, no signal needed.",
-      "exploreLibrary": "Explore Library"
+      "feature4Desc": "Perform anywhere, no signal needed."
     },
     "privacy": {
       "legalDoc": "Legal Documentation",

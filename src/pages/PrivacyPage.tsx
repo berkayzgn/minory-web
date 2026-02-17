@@ -1,15 +1,14 @@
 import { useTranslation } from "react-i18next";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
+import { PageLayout } from "../components/layout/PageLayout";
+import { Container } from "../components/ui/Container";
 
 export function PrivacyPage() {
   const { t } = useTranslation();
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark font-display text-neutral-800 dark:text-neutral-200 antialiased flex flex-col">
-      <Navbar />
-      <main className="flex-grow relative">
+    <PageLayout>
+      <main id="main-content" className="flex-grow relative">
         <header className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-surface-light dark:bg-surface-dark border-b border-neutral-200 dark:border-neutral-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tight">
                 {t("pages.privacy.title")}
@@ -24,10 +23,10 @@ export function PrivacyPage() {
                 {t("pages.privacy.intro2")}
               </p>
             </div>
-          </div>
+          </Container>
         </header>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <Container className="py-12 sm:py-16">
           <div className="max-w-3xl mx-auto space-y-14">
             {/* 1. Information Stored on Your Device */}
             <section className="scroll-mt-32" id="storage">
@@ -143,9 +142,8 @@ export function PrivacyPage() {
               </a>
             </section>
           </div>
-        </div>
+        </Container>
       </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

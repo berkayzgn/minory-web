@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ROUTES } from "../constants/routes";
 
 /** Instagram marka ikonu (currentColor ile tema rengine uyumlu) */
 function InstagramIcon({ className }: { className?: string }) {
@@ -22,10 +23,10 @@ export function Footer() {
         <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mb-4">
           {t("footer.copyright")}
         </p>
-        <nav className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm">
+        <nav className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm py-2" aria-label="Footer">
           <Link
-            to="/privacy"
-            className="inline-flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            to={ROUTES.privacy}
+            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             <span className="material-icons-round text-base" aria-hidden>policy</span>
             {t("footer.privacy")}
@@ -33,7 +34,7 @@ export function Footer() {
           <span className="text-neutral-400 dark:text-neutral-500" aria-hidden="true">·</span>
           <a
             href={CONTACT_EMAIL}
-            className="inline-flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             <span className="material-icons-round text-base" aria-hidden>mail</span>
             {t("footer.contact")}
@@ -43,7 +44,7 @@ export function Footer() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             <InstagramIcon className="w-4 h-4 shrink-0" />
             {t("footer.instagram")}

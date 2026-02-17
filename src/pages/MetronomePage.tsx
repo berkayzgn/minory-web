@@ -1,18 +1,17 @@
 import { useTranslation } from "react-i18next";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
+import { PageLayout } from "../components/layout/PageLayout";
+import { Container } from "../components/ui/Container";
 import { PhoneHero } from "../components/PhoneHero";
 
 export function MetronomePage() {
   const { t } = useTranslation();
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark font-display text-neutral-800 dark:text-neutral-200 antialiased flex flex-col selection:bg-primary/30">
-      <Navbar />
-      <section className="relative flex-grow flex items-center justify-center py-32 overflow-hidden pt-28 sm:pt-32">
+    <PageLayout wrapperClassName="selection:bg-primary/30">
+      <main id="main-content" className="relative flex-grow flex items-center justify-center py-32 overflow-hidden pt-28 sm:pt-32">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 translate-x-[-50%]" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10 translate-x-[20%] translate-y-[20%]" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <Container fullWidth>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Left: Content */}
             <div className="space-y-12 order-2 lg:order-1">
@@ -67,9 +66,8 @@ export function MetronomePage() {
               <PhoneHero src="/metronome-light.PNG" alt="Minory Metronome" className="z-10" />
             </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+        </Container>
+      </main>
+    </PageLayout>
   );
 }

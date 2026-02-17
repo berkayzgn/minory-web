@@ -93,8 +93,6 @@
       "instantResponseDesc": "Sıfır gecikmeli işleme; çaldığınız anında ekrana yansır.",
       "darkMode": "Karanlık Mod Önizleme",
       "darkModeDesc": "Loş sahneler ve gece stüdyo oturumları için tasarlandı. Göz yormaz.",
-      "downloadNow": "Şimdi İndir",
-      "seeHowItWorks": "Nasıl çalışır",
       "accuracy": "Hassasiyet",
       "rangeCap": "Aralık Üst Sınırı",
       "latency": "Gecikme",
@@ -110,7 +108,6 @@
       "glowMode": "İmza Glow Modu",
       "glowModeNew": "Yeni",
       "glowModeDesc": "Gürültülü ortamlarda bile ritimde kalın. Ekran, vuruşunuzla eş zamanlı nabız atar; ses yeterli olmadığında net bir görsel ipucu sunar.",
-      "exploreTiming": "Tüm zamanlama araçlarını keşfet",
       "efficiency": "Verimlilik",
       "efficiencyDesc": "Uzun oturumlar için düşük güç modu etkin."
     },
@@ -123,8 +120,6 @@
       "voicingsDesc": "Caz, pop, rock ve klasik için doğru akor kütüphanesi. Akor başına birden fazla pozisyon.",
       "offline": "Tam Çevrimdışı Erişim",
       "offlineDesc": "Kütüphaneyi bir kez indirin. Provada, sahnede veya çalışma odasında her yerde kullanın—bağlantı gerekmez.",
-      "downloadNow": "Şimdi İndir",
-      "seeHowItWorks": "Nasıl çalışır",
       "voicingsStatValue": "Yüzlerce",
       "voicingsStat": "Akor",
       "instrumentsStat": "Enstrüman",
@@ -143,8 +138,7 @@
       "feature3Title": "Şarkını formatla",
       "feature3Desc": "Kopyala, yapıştır, anında düzenle.",
       "feature4Title": "Çevrimdışı Mod",
-      "feature4Desc": "İnternet gerekmeden her yerde kullanın.",
-      "exploreLibrary": "Kütüphaneyi Keşfet"
+      "feature4Desc": "İnternet gerekmeden her yerde kullanın."
     },
     "privacy": {
       "legalDoc": "Yasal Belge",
