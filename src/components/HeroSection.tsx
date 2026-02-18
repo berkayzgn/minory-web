@@ -116,7 +116,7 @@ export function HeroSection() {
             {t("hero.subtitle2")}
           </p>
           <div className="flex w-full lg:w-auto justify-center lg:justify-start text-black dark:text-black mt-2">
-            <div className="w-[7.7rem] h-[7.7rem] sm:w-[9.9rem] sm:h-[9.9rem] md:w-[12.1rem] md:h-[12.1rem] overflow-hidden rounded-full flex-shrink-0">
+            <div className="w-[4rem] h-[4rem] sm:w-[8rem] sm:h-[8rem] md:w-[9rem] md:h-[9rem] overflow-hidden rounded-full flex-shrink-0">
               <LogoMinory className="w-full h-full animate-spin-slow" />
             </div>
           </div>
@@ -126,7 +126,7 @@ export function HeroSection() {
         <div className="lg:flex-1 relative w-full max-w-[280px] sm:max-w-xl lg:max-w-2xl mx-auto lg:mx-0 h-[360px] sm:h-[440px] md:h-[520px] lg:h-[580px] flex justify-center items-start perspective-1000 overflow-visible touch-pan-y">
           <div className="relative w-[260px] sm:w-[320px] sm:translate-x-8 md:translate-x-12 lg:translate-x-20 pointer-events-none md:pointer-events-auto">
           {/* Back Phone (Dark Mode) */}
-          <div className="absolute z-10 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black shadow-2xl animate-float-back overflow-hidden translate-x-[-70px] translate-y-6 sm:translate-x-[-90px] sm:translate-y-7 md:translate-x-[-110px] md:translate-y-8 lg:translate-x-[-120px] lg:translate-y-8">
+          <div className="absolute z-10 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black hero-phone-shadow animate-float-back overflow-hidden translate-x-[-70px] translate-y-6 sm:translate-x-[-90px] sm:translate-y-7 md:translate-x-[-110px] md:translate-y-8 lg:translate-x-[-120px] lg:translate-y-8">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-14 sm:h-5 sm:w-20 bg-black rounded-b-lg sm:rounded-b-xl z-20" />
             <div className="w-full h-[340px] sm:h-[420px] md:h-[500px] lg:h-[560px] bg-neutral-900 relative">
               <PhoneScreenImage src={HERO_PHONE_DARK_IMAGE} alt="Minory Studio dark" className="absolute inset-0 w-full h-full object-cover object-top" />
@@ -185,7 +185,7 @@ export function HeroSection() {
           </div>
 
           {/* Front Phone (Light Mode) */}
-          <div className="absolute z-20 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black shadow-2xl animate-float-front overflow-hidden left-1/2 -translate-x-1/2">
+          <div className="absolute z-20 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black hero-phone-shadow animate-float-front overflow-hidden left-1/2 -translate-x-1/2">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-14 sm:h-5 sm:w-20 bg-black rounded-b-lg sm:rounded-b-xl z-20" />
             <div className="w-full h-[340px] sm:h-[420px] md:h-[500px] lg:h-[560px] bg-background-light relative">
               <PhoneScreenImage src={HERO_PHONE_LIGHT_IMAGE} alt="Minory Studio light" className="absolute inset-0 w-full h-full object-cover object-top" />

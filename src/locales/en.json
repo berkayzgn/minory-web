@@ -46,6 +46,10 @@
   "trustedBy": {
     "label": "Trusted by artists from"
   },
+  "homeIntro": {
+    "paragraph1": "Minory Studio brings tuner, metronome, chord library and repertoire management into one app. Tuning, tempo, chord lookup or setlist—all in one place, clear and fast.",
+    "paragraph2": "From the practice room to the stage: clarity and precision. No clutter, just what you need."
+  },
   "featuresSection": {
     "eyebrow": "Precision Tools",
     "title": "Everything you need to",
@@ -53,22 +57,22 @@
     "subtitle": "From the practice room to the stage, Minory Studio provides professional-grade tools designed for the modern musician. No clutter, just clarity.",
     "tuner": {
       "title": "Tuner",
-      "desc": "Accurate to 0.1 cents with a responsive strobe display.\nPerfect for any instrument, even in noisy environments.",
+      "desc": "Ultra-low latency pitch detection with 0.1 cent accuracy and a responsive strobe display. Works with any instrument—guitar, bass, strings, keys—even in noisy environments. Instant response and a dark mode that's easy on the eyes in dim studios or on stage.",
       "learnMore": "Learn more"
     },
     "metronome": {
       "title": "Metronome",
-      "desc": "Work with all rhythm types.\nStay in the groove with visual beat indicators.",
+      "desc": "Set your BPM and time signature, then stay in the groove with clear visual beat indicators. Tactile, haptic-friendly controls and a signature glow mode that keeps you on the beat when audio isn't enough. Built for focused practice and long sessions.",
       "learnMore": "Learn more"
     },
     "chords": {
       "title": "Chord Library",
-      "desc": "Discover hundreds of chords with interactive chord cards.",
+      "desc": "Search and explore hundreds of chord shapes with clear fingerings and voicings for guitar, piano and ukulele. Multiple positions per chord, from jazz to rock to classical. Use it online or download once and take the full library offline to rehearsal or the stage.",
       "learnMore": "Learn more"
     },
     "repertoire": {
       "title": "My Repertoire",
-      "desc": "Get your songs stage-ready.\nAdd lyrics and chords to every song, then start practicing with auto-scroll and transpose.",
+      "desc": "Keep your setlists, lyrics and chord charts in one place. Add songs, edit formatting, and practice with auto-scroll synced to your tempo. Transpose on the fly, share with your band, or export to PDF—so your repertoire is always gig-ready.",
       "learnMore": "Learn more"
     },
     "ctaTitle": "Ready to elevate your practice?",

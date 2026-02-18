@@ -62,10 +62,10 @@ export function FeaturesSection() {
                   <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
                     {t(`featuresSection.${key}.title`)}
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-6 whitespace-pre-line max-w-[260px]">
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-6 whitespace-pre-line max-w-[260px] line-clamp-6">
                     {t(`featuresSection.${key}.desc`)}
                   </p>
-                  <span className="inline-flex items-center text-primary font-semibold group-hover/card:text-primary-900 dark:group-hover/card:text-primary-100 transition-colors mt-auto mb-8 w-fit">
+                  <span className="inline-flex items-center text-primary font-semibold group-hover/card:text-primary/90 transition-colors mt-auto mb-8 w-fit">
                     {t(`featuresSection.${key}.learnMore`)}{" "}
                     <span className="material-icons-round text-sm ml-1">arrow_forward</span>
                   </span>

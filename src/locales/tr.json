@@ -46,29 +46,33 @@
   "trustedBy": {
     "label": "Sanatçılar tarafından tercih ediliyor"
   },
+  "homeIntro": {
+    "paragraph1": "Minory Studio, tuner, metronom, akor kütüphanesi ve repertuar yönetimini tek uygulamada toplar. Akort, tempo, akor arama veya set listesi—hepsi net ve hızlı.",
+    "paragraph2": "Çalışma odasından sahneye: netlik ve hassasiyet. Karmaşa yok, sadece ihtiyacınız olanlar."
+  },
   "featuresSection": {
     "eyebrow": "Hassas Araçlar",
-      "title": "Ustalığınızı geliştirmek için",
-      "titleBreak": "ihtiyacınız olan her şey.",
+    "title": "Ustalığınızı geliştirmek için",
+    "titleBreak": "ihtiyacınız olan her şey.",
     "subtitle": "Çalışma odasından sahneye, Minory Studio modern müzisyenler için tasarlanmış profesyonel araçlar sunar. Karmaşa yok, sadece netlik.",
     "tuner": {
       "title": "Tuner",
-      "desc": "Duyarlı strobe ekranı ile 0.1 sent hassasiyet.\nGürültülü ortamlarda bile her enstrüman için idealdir.",
+      "desc": "0.1 sent hassasiyet ve duyarlı strobe ekranıyla ultra düşük gecikmeli perde algılama. Gitar, bas, telli çalgılar, tuşlular—gürültülü ortamlarda bile her enstrümanla çalışır. Anında tepki ve loş stüdyo veya sahnede göz yormayan karanlık mod.",
       "learnMore": "Daha fazla"
     },
     "metronome": {
       "title": "Metronom",
-      "desc": "Tüm ritim tipleri ile çalışın.\nGörsel vuruş göstergeleri ile ritmin içinde kalın.",
+      "desc": "BPM ve zaman imzanızı ayarlayın, net görsel vuruş göstergeleriyle ritmin içinde kalın. Dokunsal, haptik destekli kontroller ve ses yetmediğinde sizi vuruşta tutan imza glow modu. Odaklı pratik ve uzun oturumlar için tasarlandı.",
       "learnMore": "Daha fazla"
     },
     "chords": {
       "title": "Akor Kütüphanesi",
-      "desc": "İnteraktif akor kartları ile yüzlerce akoru keşfedin.",
+      "desc": "Gitar, piyano ve ukulele için net parmak pozisyonları ve voicing'lerle yüzlerce akor şeklini arayın ve keşfedin. Akor başına birden fazla pozisyon, cazdan rocka klasik tarza. Çevrimiçi kullanın veya bir kez indirip tüm kütüphaneyi prova veya sahneye çevrimdışı götürün.",
       "learnMore": "Daha fazla"
     },
     "repertoire": {
       "title": "Repertuarım",
-      "desc": "Şarkılarınızı sahneye hazır hale getirin.\nHer şarkıya söz ve akorları ekleyin, sonra hareketli ekran ve transpoze özelliği ile çalışmaya başlayın.",
+      "desc": "Set listelerinizi, sözleri ve akor şemalarınızı tek yerde tutun. Şarkı ekleyin, biçimi düzenleyin, tempoya senkron hareketli ekranla pratik yapın. Anında transpoze edin, grubunuzla paylaşın veya PDF'e aktarın—repertuarınız her zaman sahneye hazır kalsın.",
       "learnMore": "Daha fazla"
     },
     "ctaTitle": "Pratiklerinizi yükseltmeye hazır mısınız?",
