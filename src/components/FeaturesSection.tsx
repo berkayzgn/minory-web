@@ -91,7 +91,9 @@ export function FeaturesSection() {
                 </p>
                 <div className="flex justify-center">
                   <a
-                    href="#"
+                    href="https://apps.apple.com/tr/app/minory/id6758581928?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block hover:opacity-90 transition-opacity [&>img]:block"
                   >
                     <img
