@@ -117,7 +117,11 @@ export function HeroSection() {
           </p>
           <div className="flex w-full lg:w-auto justify-center lg:justify-start text-black dark:text-black mt-2">
             <div className="w-[4rem] h-[4rem] sm:w-[8rem] sm:h-[8rem] md:w-[9rem] md:h-[9rem] overflow-hidden rounded-full flex-shrink-0">
-              <LogoMinory className="w-full h-full animate-spin-slow" />
+              <img
+                src="/image.png"
+                alt="Minory Studio"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

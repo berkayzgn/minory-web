@@ -1,9 +1,9 @@
 {
   "nav": {
-    "brand": "Minory",
+    "brand": "Minory Studio :",
     "home": "Ana Sayfa",
     "features": "Özellikler",
-    "studio": "Stüdyo",
+    "studio": "Tuner & Metronom",
     "pricing": "Fiyatlandırma",
     "support": "Destek",
     "metronome": "Metronom",
@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Minory",
-    "titleStudio": "Studio",
+    "titleStudio": "Tuner & Metronom",
     "subtitle1": "Tüm Müzik Araçlarınız Tek Uygulamada.",
     "subtitle2": "Modern sanatçı için profesyonel hassasiyet.",
     "ctaAppStore": "App Store'dan İndir",

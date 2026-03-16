@@ -1,9 +1,9 @@
 {
   "nav": {
-    "brand": "Minory",
+    "brand": "Minory Studio :",
     "home": "Home",
     "features": "Features",
-    "studio": "Studio",
+    "studio": "Tuner & Metronome",
     "pricing": "Pricing",
     "support": "Support",
     "metronome": "Metronome",
@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Minory",
-    "titleStudio": "Studio",
+    "titleStudio": "Tuner & Metronome",
     "subtitle1": "All Your Music Tools in One App.",
     "subtitle2": "Professional grade precision for the modern artist.",
     "ctaAppStore": "Download on App Store",
