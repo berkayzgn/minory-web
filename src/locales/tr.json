@@ -8,7 +8,7 @@
     "support": "Destek",
     "metronome": "Metronom",
     "tuner": "Tuner",
-    "repertoire": "Repertuar",
+    "repertoire": "Repertuvar",
     "chordsLibrary": "Akor Kütüphanesi"
   },
   "hero": {
@@ -47,7 +47,7 @@
     "label": "Sanatçılar tarafından tercih ediliyor"
   },
   "homeIntro": {
-    "paragraph1": "Minory Studio, tuner, metronom, akor kütüphanesi ve repertuar yönetimini tek uygulamada toplar. Akort, tempo, akor arama veya set listesi—hepsi net ve hızlı.",
+    "paragraph1": "Minory Studio, tuner, metronom, akor kütüphanesi ve repertuvar yönetimini tek uygulamada toplar. Akort, tempo, akor arama veya set listesi—hepsi net ve hızlı.",
     "paragraph2": "Çalışma odasından sahneye: netlik ve hassasiyet. Karmaşa yok, sadece ihtiyacınız olanlar."
   },
   "featuresSection": {
@@ -71,8 +71,8 @@
       "learnMore": "Daha fazla"
     },
     "repertoire": {
-      "title": "Repertuarım",
-      "desc": "Set listelerinizi, sözleri ve akor şemalarınızı tek yerde tutun. Şarkı ekleyin, biçimi düzenleyin, tempoya senkron hareketli ekranla pratik yapın. Anında transpoze edin, grubunuzla paylaşın veya PDF'e aktarın—repertuarınız her zaman sahneye hazır kalsın.",
+      "title": "Repertuvarım",
+      "desc": "Set listelerinizi, sözleri ve akor şemalarınızı tek yerde tutun. Şarkı ekleyin, biçimi düzenleyin, tempoya senkron hareketli ekranla pratik yapın. Anında transpoze edin, grubunuzla paylaşın veya PDF'e aktarın—repertuvarınız her zaman sahneye hazır kalsın.",
       "learnMore": "Daha fazla"
     },
     "ctaTitle": "Pratiklerinizi yükseltmeye hazır mısınız?",
@@ -133,10 +133,10 @@
     "repertoire": {
       "badge": "Sonsuz Kütüphane",
       "title1": "Sahneye hazırlan.",
-      "title2": "Sonsuz Repertuar.",
+      "title2": "Sonsuz Repertuvar.",
       "desc": "Dağınık klasörlere veda edin. Minory Studio sözlerinizi ve akorlarınızı tipografik hassasiyetle görüntüler.",
       "feature1Title": "Sınırsız paylaşım",
-      "feature1Desc": "Tüm repertuarını sevdiklerinle rahatça paylaş ve PDF'e dönüştür.",
+      "feature1Desc": "Tüm repertuvarını sevdiklerinle rahatça paylaş ve PDF'e dönüştür.",
       "feature2Title": "Akıllı Otomatik Kaydırma",
       "feature2Desc": "BPM'inizle tam uyumlu çalışır.",
       "feature3Title": "Şarkını formatla",
@@ -154,7 +154,7 @@
       "studioToolsTuner": "Tuner",
       "studioToolsMetronome": "Metronom",
       "studioToolsChords": "Akor Kütüphanesi",
-      "studioToolsRepertoire": "Repertuar Yöneticisi",
+      "studioToolsRepertoire": "Repertuvar Yöneticisi",
       "studioToolsOutro": "Her araç bağımsız çalışacak şekilde tasarlanmış olup, birleşik bir arayüz içinde birbirine bağlı hissettirir.",
       "tunerTitle": "HASSAS TUNER",
       "tunerIntro": "Gerçek zamanlı perde algılama ile güvenle akort edin.",
@@ -177,13 +177,13 @@
       "chordLibraryBullet3": "Anında transpoze",
       "chordLibraryBullet4": "Sezgisel enstrüman görselleştirmesi",
       "chordLibraryOutro": "Prova, şarkı yazımı ve hızlı referans için tasarlandı.",
-      "repertoireTitle": "REPERTUAR YÖNETİMİ",
+      "repertoireTitle": "REPERTUVAR YÖNETİMİ",
       "repertoireIntro": "Müziğinizi yapılandırılmış ve esnek bir formatta düzenleyin.",
       "repertoireBullet1": "Akor gömülü sözler oluşturun ve düzenleyin",
       "repertoireBullet2": "Anında akor transpoze",
       "repertoireBullet3": "Şarkı koleksiyonlarını içe ve dışa aktarın",
       "repertoireBullet4": "Profesyonel PDF sürümleri oluşturun ve paylaşın",
-      "repertoireOutro": "Repertuarınız ihtiyacınız olduğunda düzenli ve erişilebilir kalır.",
+      "repertoireOutro": "Repertuvarınız ihtiyacınız olduğunda düzenli ve erişilebilir kalır.",
       "personalizedTitle": "KİŞİSELLEŞTİRİLMİŞ DENEYİM",
       "personalizedBullet1": "Açık ve koyu temalar",
       "personalizedBullet2": "Özel vurgu rengi seçimi",
