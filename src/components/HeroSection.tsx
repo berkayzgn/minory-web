@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 /** Görsel yüklenirse ekranı kaplar, yoksa/404 ise arka plandaki mock arayüz görünür */
@@ -22,69 +22,6 @@ function PhoneScreenImage({
       onLoad={() => setLoaded(true)}
       onError={() => setError(true)}
     />
-  );
-}
-
-/** Minory logo – SplashScreen ile aynı dalgalı halka (WavyCircle) */
-const SVG_SIZE = 240;
-const CENTER = SVG_SIZE / 2;
-
-function polar(r: number, angle: number, center: number) {
-  const a = (angle * Math.PI) / 180;
-  return {
-    x: center + r * Math.cos(a),
-    y: center + r * Math.sin(a),
-  };
-}
-
-function buildWavyCircle(
-  baseRadius: number,
-  amplitude: number,
-  frequency: number,
-  phase: number,
-  center: number
-): string {
-  let d = "";
-  for (let i = 0; i <= 360; i += 0.5) {
-    const r =
-      baseRadius + amplitude * Math.sin((i * frequency * Math.PI) / 180 + phase);
-    const { x, y } = polar(r, i, center);
-    d += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
-  }
-  return d + " Z";
-}
-
-function LogoMinory({ className }: { className?: string }) {
-  const rings = useMemo(() => {
-    const list: string[] = [];
-    for (let i = 0; i < 80; i++) {
-      list.push(buildWavyCircle(28 + i * 4.2, 1.5, 12, i * 0.35, CENTER));
-    }
-    return list;
-  }, []);
-
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`}
-      fill="none"
-      className={className}
-      aria-hidden
-    >
-      <g stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
-        {rings.map((d, i) => (
-          <path key={i} d={d} />
-        ))}
-      </g>
-      {/* Plak merkezi – SplashScreen ile aynı */}
-      <circle cx={CENTER} cy={CENTER} r={26} fill="currentColor" />
-      <circle
-        cx={CENTER}
-        cy={CENTER}
-        r={6}
-        fill="var(--logo-center-bg)"
-      />
-    </svg>
   );
 }
 
