@@ -2,12 +2,18 @@ import { useTranslation } from "react-i18next";
 import { PageLayout } from "../components/layout/PageLayout";
 import { Container } from "../components/ui/Container";
 import { PhoneHero } from "../components/PhoneHero";
+import { SEOHead } from "../components/SEOHead";
 
 export function RepertoirePage() {
   const { t } = useTranslation();
   return (
     <PageLayout wrapperClassName="selection:bg-primary/30 selection:text-primary">
       <main id="main-content" className="relative w-full py-24 lg:py-32 overflow-hidden pt-28 sm:pt-32 flex-grow">
+        <SEOHead
+          title="Song Practice & Repertoire Tools for Musicians | Minory"
+          description="Organize your songs, chord sheets and setlists with Minory's practice tools. Create, edit, transpose and share your repertoire from one app."
+          url="https://minory.studio/repertoire"
+        />
         <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4" />
         <div className="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/4" />
 

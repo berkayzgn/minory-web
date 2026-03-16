@@ -2,12 +2,18 @@ import { useTranslation } from "react-i18next";
 import { PageLayout } from "../components/layout/PageLayout";
 import { Container } from "../components/ui/Container";
 import { PhoneHero } from "../components/PhoneHero";
+import { SEOHead } from "../components/SEOHead";
 
 export function TunerPage() {
   const { t } = useTranslation();
   return (
     <PageLayout>
       <main id="main-content" className="relative flex-grow flex items-center py-24 overflow-hidden pt-28 sm:pt-32">
+        <SEOHead
+          title="Online Guitar Tuner – Tune Your Guitar Instantly | Minory"
+          description="Use Minory's precision online guitar tuner for fast, accurate tuning with real-time pitch detection and cent-accurate feedback."
+          url="https://minory.studio/tuner"
+        />
         <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10 dark:bg-primary/10" />
         <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl -z-10 dark:bg-indigo-500/10" />
 

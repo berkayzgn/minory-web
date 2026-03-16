@@ -2,12 +2,18 @@ import { useTranslation } from "react-i18next";
 import { PageLayout } from "../components/layout/PageLayout";
 import { Container } from "../components/ui/Container";
 import { PhoneHero } from "../components/PhoneHero";
+import { SEOHead } from "../components/SEOHead";
 
 export function MetronomePage() {
   const { t } = useTranslation();
   return (
     <PageLayout wrapperClassName="selection:bg-primary/30">
       <main id="main-content" className="relative flex-grow flex items-center justify-center py-32 overflow-hidden pt-28 sm:pt-32">
+        <SEOHead
+          title="Smart Metronome for Musicians | Minory"
+          description="Practice with Minory's smart metronome featuring tactile BPM control, visual glow mode and precise timing for serious musicians."
+          url="https://minory.studio/metronome"
+        />
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 translate-x-[-50%]" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10 translate-x-[20%] translate-y-[20%]" />
 
