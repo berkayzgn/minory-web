@@ -74,7 +74,7 @@ export function FeaturesSection() {
                   </div>
                   {/* Phone mockup */}
                   <div className="absolute bottom-0 right-0 w-3/4 md:w-2/3 h-2/3 flex items-end justify-end pr-2 pb-2 md:pr-4 md:pb-4 z-0 origin-bottom-right transition-transform duration-300 ease-out group-hover/card:scale-105">
-                    <PhoneHero variant="card" src={featureImages[key]} alt="" imagePosition={key === "metronome" ? "50% -18%" : undefined} />
+                    <PhoneHero variant="card" src={featureImages[key]} alt="" imagePosition={undefined} />
                   </div>
                 </Link>
               );

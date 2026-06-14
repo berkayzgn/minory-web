@@ -15,7 +15,7 @@ export const FEATURES: ReadonlyArray<{
 }> = [
   { key: "tuner", path: ROUTES.tuner, icon: "speed", image: "/tuner.png" },
   { key: "metronome", path: ROUTES.metronome, icon: "timer", image: "/metronome.png" },
-  { key: "chords", path: ROUTES.chords, icon: "library_music", image: "/chords.PNG" },
+  { key: "chords", path: ROUTES.chords, icon: "library_music", image: "/chords.png" },
   { key: "repertoire", path: ROUTES.repertoire, icon: "folder_special", image: "/repertoire.png" },
   { key: "recorder", path: ROUTES.recorder, icon: "mic", image: "/recorder.png" },
 ];
