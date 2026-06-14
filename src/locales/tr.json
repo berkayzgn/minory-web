@@ -9,7 +9,8 @@
     "metronome": "Metronom",
     "tuner": "Tuner",
     "repertoire": "Repertuvar",
-    "chordsLibrary": "Akor Kütüphanesi"
+    "chordsLibrary": "Akor Kütüphanesi",
+    "recorder": "Kayıt"
   },
   "hero": {
     "title": "Minory",
@@ -73,6 +74,11 @@
     "repertoire": {
       "title": "Repertuvarım",
       "desc": "Set listelerinizi, sözleri ve akor şemalarınızı tek yerde tutun. Şarkı ekleyin, biçimi düzenleyin, tempoya senkron hareketli ekranla pratik yapın. Anında transpoze edin, grubunuzla paylaşın veya PDF'e aktarın—repertuvarınız her zaman sahneye hazır kalsın.",
+      "learnMore": "Daha fazla"
+    },
+    "recorder": {
+      "title": "Pratik Kaydedici",
+      "desc": "Her pratik anını kaydedin. Enstrümanınızdan doğrudan yüksek kaliteli ses kaydedin, ilerlemenizi seans seans dinleyin ve kayıtları öğretmenlerinizle veya grup arkadaşlarınızla anında paylaşın.",
       "learnMore": "Daha fazla"
     },
     "ctaTitle": "Pratiklerinizi yükseltmeye hazır mısınız?",
@@ -143,6 +149,18 @@
       "feature3Desc": "Kopyala, yapıştır, anında düzenle.",
       "feature4Title": "Çevrimdışı Mod",
       "feature4Desc": "İnternet gerekmeden her yerde kullanın."
+    },
+    "recorder": {
+      "badge": "Stüdyo Kaydı",
+      "title1": "Pratiğini Kaydet.",
+      "title2": "İlerlemeni Duy.",
+      "desc": "Harika bir anı kaçırma. Minory'nin yerleşik kaydedicisi kristal netliğinde ses yakalar; dinle, gelişimini takip et ve müziğini paylaş.",
+      "highQuality": "Yüksek Kaliteli Ses",
+      "highQualityDesc": "Enstrümanınızdan doğrudan stüdyo netliğinde kayıt yapın. Her nota, her nüans yakalanır.",
+      "practiceSync": "Pratik Seansı Senkronizasyonu",
+      "practiceSyncDesc": "Kayıtları metronom seanslarınıza bağlayarak tempo doğruluğunuzu ve zaman içindeki gelişiminizi takip edin.",
+      "saveShare": "Kaydet & Anında Paylaş",
+      "saveShareDesc": "Kayıtlar müzik kütüphanenize kaydedilir. Öğretmenlerinizle, grup arkadaşlarınızla veya dinleyicilerinizle doğrudan paylaşın—ekstra adım yok."
     },
     "privacy": {
       "title": "Gizlilik Politikası",

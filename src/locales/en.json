@@ -9,7 +9,8 @@
     "metronome": "Metronome",
     "tuner": "Tuner",
     "repertoire": "Repertoire",
-    "chordsLibrary": "Chords Library"
+    "chordsLibrary": "Chords Library",
+    "recorder": "Recorder"
   },
   "hero": {
     "title": "Minory",
@@ -73,6 +74,11 @@
     "repertoire": {
       "title": "My Repertoire",
       "desc": "Keep your setlists, lyrics and chord charts in one place. Add songs, edit formatting, and practice with auto-scroll synced to your tempo. Transpose on the fly, share with your band, or export to PDF—so your repertoire is always gig-ready.",
+      "learnMore": "Learn more"
+    },
+    "recorder": {
+      "title": "Practice Recorder",
+      "desc": "Capture every moment of your practice. Record high-quality audio directly from your instrument, review your progress session by session, and share recordings with teachers or bandmates instantly.",
       "learnMore": "Learn more"
     },
     "ctaTitle": "Ready to elevate your practice?",
@@ -143,6 +149,18 @@
       "feature3Desc": "Copy, paste, edit instantly.",
       "feature4Title": "Offline Mode",
       "feature4Desc": "Perform anywhere, no signal needed."
+    },
+    "recorder": {
+      "badge": "Studio Recording",
+      "title1": "Record Your Practice.",
+      "title2": "Hear Your Progress.",
+      "desc": "Never lose a great take. Minory's built-in recorder captures crystal-clear audio so you can listen back, track your improvement, and share your music.",
+      "highQuality": "High-Quality Audio",
+      "highQualityDesc": "Record straight from your instrument with studio-grade clarity. Every note, every nuance captured.",
+      "practiceSync": "Practice Session Sync",
+      "practiceSyncDesc": "Link recordings to your metronome sessions to track tempo accuracy and improvement over time.",
+      "saveShare": "Save & Share Instantly",
+      "saveShareDesc": "Recordings save to your music library. Share directly with teachers, bandmates, or your audience—no extra steps."
     },
     "privacy": {
       "title": "Privacy Policy",

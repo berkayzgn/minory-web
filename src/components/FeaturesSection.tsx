@@ -47,35 +47,38 @@ export function FeaturesSection() {
 
           {/* Feature Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {FEATURES.map(({ key, path, icon }) => (
-              <Link
-                key={key}
-                id={`feature-${key}`}
-                to={path}
-                className="feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px] cursor-pointer"
-                aria-label={`${t(`featuresSection.${key}.title`)} — ${t(`featuresSection.${key}.learnMore`)}`}
-              >
-                <div className="p-8 lg:p-10 flex flex-col h-full relative z-20 max-w-[50%] min-w-0">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
-                    <span className="material-icons-round text-2xl">{icon}</span>
+            {FEATURES.map(({ key, path, icon }, index) => {
+              const isLastOdd = index === FEATURES.length - 1 && FEATURES.length % 2 !== 0;
+              return (
+                <Link
+                  key={key}
+                  id={`feature-${key}`}
+                  to={path}
+                  className={`feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px] cursor-pointer${isLastOdd ? " md:col-span-2 md:max-w-[calc(50%-1.25rem)] md:mx-auto md:w-full" : ""}`}
+                  aria-label={`${t(`featuresSection.${key}.title`)} — ${t(`featuresSection.${key}.learnMore`)}`}
+                >
+                  <div className="p-8 lg:p-10 flex flex-col h-full relative z-20 max-w-[50%] min-w-0">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
+                      <span className="material-icons-round text-2xl">{icon}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
+                      {t(`featuresSection.${key}.title`)}
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 mb-6 whitespace-pre-line max-w-[260px] line-clamp-6">
+                      {t(`featuresSection.${key}.desc`)}
+                    </p>
+                    <span className="inline-flex items-center text-primary font-semibold group-hover/card:text-primary/90 transition-colors mt-auto mb-8 w-fit">
+                      {t(`featuresSection.${key}.learnMore`)}{" "}
+                      <span className="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
-                    {t(`featuresSection.${key}.title`)}
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-6 whitespace-pre-line max-w-[260px] line-clamp-6">
-                    {t(`featuresSection.${key}.desc`)}
-                  </p>
-                  <span className="inline-flex items-center text-primary font-semibold group-hover/card:text-primary/90 transition-colors mt-auto mb-8 w-fit">
-                    {t(`featuresSection.${key}.learnMore`)}{" "}
-                    <span className="material-icons-round text-sm ml-1">arrow_forward</span>
-                  </span>
-                </div>
-                {/* Phone mockup - aynı model, sadece iç görsel kart özelliğine göre */}
-                <div className="absolute bottom-0 right-0 w-3/4 md:w-2/3 h-2/3 flex items-end justify-end pr-2 pb-2 md:pr-4 md:pb-4 z-0 origin-bottom-right transition-transform duration-300 ease-out group-hover/card:scale-105">
-                  <PhoneHero variant="card" src={featureImages[key]} alt="" imagePosition={key === "metronome" ? "50% -18%" : undefined} />
-                </div>
-              </Link>
-            ))}
+                  {/* Phone mockup */}
+                  <div className="absolute bottom-0 right-0 w-3/4 md:w-2/3 h-2/3 flex items-end justify-end pr-2 pb-2 md:pr-4 md:pb-4 z-0 origin-bottom-right transition-transform duration-300 ease-out group-hover/card:scale-105">
+                    <PhoneHero variant="card" src={featureImages[key]} alt="" imagePosition={key === "metronome" ? "50% -18%" : undefined} />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Bottom CTA */}

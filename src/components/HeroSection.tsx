@@ -26,8 +26,8 @@ function PhoneScreenImage({
 }
 
 /** Telefon ekranı görselleri: public altındaki dosyalar */
-const HERO_PHONE_LIGHT_IMAGE = "/IMG_1813.PNG";
-const HERO_PHONE_DARK_IMAGE = "/IMG_1814.PNG";
+const HERO_PHONE_LIGHT_IMAGE = "/homepage.png";
+const HERO_PHONE_DARK_IMAGE = "/homepage-dark.png";
 
 export function HeroSection() {
   const { t } = useTranslation();

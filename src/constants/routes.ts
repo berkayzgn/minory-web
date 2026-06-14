@@ -9,4 +9,5 @@ export const ROUTES = {
   metronome: "/metronome",
   repertoire: "/repertoire",
   chords: "/chords",
+  recorder: "/recorder",
 } as const;

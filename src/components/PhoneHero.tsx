@@ -3,7 +3,7 @@
  * aynı dış çerçeve ve model görünümü için kullanılır.
  */
 interface PhoneHeroProps {
-  /** Ekran görüntüsü (örn. /IMG_1813.PNG) */
+  /** Ekran görüntüsü (örn. /tuner.png) */
   src: string;
   /** Görsel alt metni */
   alt?: string;
@@ -45,7 +45,8 @@ export function PhoneHero({ src, alt = "Minory Studio", className = "", variant 
           <img
             src={src}
             alt={alt}
-            className="w-full h-full object-cover object-[50%_-8%]"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: imagePosition ?? "50% -8%" }}
           />
         </div>
       </div>

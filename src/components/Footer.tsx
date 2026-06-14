@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ROUTES } from "../constants/routes";
+import { usePageAccentContext } from "../contexts/PageAccentContext";
 
 /** Instagram marka ikonu (currentColor ile tema rengine uyumlu) */
 function InstagramIcon({ className }: { className?: string }) {
@@ -16,35 +17,36 @@ const CONTACT_EMAIL = "mailto:zgn.studio@outlook.com";
 
 export function Footer() {
   const { t } = useTranslation();
+  const { isColored } = usePageAccentContext();
 
   return (
-    <footer className="bg-neutral-100 dark:bg-neutral-900/50 border-t border-neutral-200 dark:border-neutral-800">
+    <footer className={isColored ? "border-t border-white/10" : "bg-neutral-100 dark:bg-neutral-900/50 border-t border-neutral-200 dark:border-neutral-800"}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
-        <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+        <p className={`text-center text-sm mb-4 ${isColored ? "text-white/50" : "text-neutral-500 dark:text-neutral-400"}`}>
           {t("footer.copyright")}
         </p>
         <nav className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm py-2" aria-label="Footer">
           <Link
             to={ROUTES.privacy}
-            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className={`inline-flex items-center gap-1.5 py-2 min-h-[44px] transition-colors ${isColored ? "text-white/50 hover:text-white" : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"}`}
           >
             <span className="material-icons-round text-base" aria-hidden>policy</span>
             {t("footer.privacy")}
           </Link>
-          <span className="text-neutral-400 dark:text-neutral-500" aria-hidden="true">·</span>
+          <span className={isColored ? "text-white/20" : "text-neutral-400 dark:text-neutral-500"} aria-hidden="true">·</span>
           <a
             href={CONTACT_EMAIL}
-            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className={`inline-flex items-center gap-1.5 py-2 min-h-[44px] transition-colors ${isColored ? "text-white/50 hover:text-white" : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"}`}
           >
             <span className="material-icons-round text-base" aria-hidden>mail</span>
             {t("footer.contact")}
           </a>
-          <span className="text-neutral-400 dark:text-neutral-500" aria-hidden="true">·</span>
+          <span className={isColored ? "text-white/20" : "text-neutral-400 dark:text-neutral-500"} aria-hidden="true">·</span>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 py-2 min-h-[44px] items-center text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className={`inline-flex items-center gap-1.5 py-2 min-h-[44px] transition-colors ${isColored ? "text-white/50 hover:text-white" : "text-neutral-600 dark:text-neutral-400 hover:text-primary dark:hover:text-primary"}`}
           >
             <InstagramIcon className="w-4 h-4 shrink-0" />
             {t("footer.instagram")}
