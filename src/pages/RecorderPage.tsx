@@ -11,7 +11,7 @@ export function RecorderPage() {
 
   return (
     <PageLayout>
-      <main id="main-content" className="relative flex-grow flex items-center py-32 overflow-hidden pt-28 sm:pt-32">
+      <main id="main-content" className="relative flex-grow flex items-center pt-24 sm:pt-28 pb-16 lg:pb-20 overflow-hidden">
         <SEOHead
           title="Practice Recorder for Musicians | Minory"
           description="Record your practice sessions with Minory's built-in recorder. Capture your playing, review your progress and share recordings instantly."
@@ -21,15 +21,15 @@ export function RecorderPage() {
         <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -z-10" />
 
         <Container fullWidth>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Content */}
-            <div className="space-y-12 order-2 lg:order-1">
-              <div className="space-y-6">
+            <div className="space-y-8 order-2 lg:order-1">
+              <div className="space-y-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20">
                   <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />
                   <span className="text-xs font-bold tracking-widest text-white uppercase">{t("pages.recorder.badge")}</span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold leading-[1.1] text-white tracking-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.1] text-white tracking-tight">
                   {t("pages.recorder.title1")}
                   <br />
                   <span className="text-white/95">{t("pages.recorder.title2")}</span>
@@ -39,7 +39,7 @@ export function RecorderPage() {
                 </p>
               </div>
 
-              <div className="grid gap-10">
+              <div className="grid gap-6">
                 <div className="flex gap-5 items-start">
                   <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
                     <span className="material-icons-round text-red-400 text-2xl">mic</span>

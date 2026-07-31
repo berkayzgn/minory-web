@@ -21,7 +21,7 @@ export function RepertoirePage() {
         <div className="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-black/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/4" />
 
         <Container>
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             {/* Left: Content */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-8 order-2 lg:order-1">
               <div className="space-y-4">

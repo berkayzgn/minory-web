@@ -31,11 +31,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: clip;
   transition: background-color 600ms ease;
 }
 
@@ -56,8 +58,8 @@ body {
 }
 
 @keyframes float-back {
-  0%, 100% { transform: translate(40px, 40px); }
-  50% { transform: translate(40px, 30px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .animate-float-front {
@@ -103,6 +105,39 @@ body {
 
 .animate-spin-slow {
   animation: spin-slow 12s linear infinite;
+}
+
+/* Hero phone mockups - fluid scale via container query */
+.hero-phones-viewport {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 440 / 640;
+  margin-inline: auto;
+  /* overflow: hidden yok — telefon gölgelerinin kenarlardan kesilmemesi için.
+     Stage içeriği zaten 440x640 sınırları içinde, sadece box-shadow taşar. */
+  overflow: visible;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-phones-stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 440px;
+  height: 640px;
+  transform-origin: top center;
+  /* Fallback: viewport zaten max-width:440px, yani tam boyutta scale gerekmez */
+  transform: translateX(-50%);
+}
+
+/* 440px'in altında container genişliğine göre orantılı küçült.
+   calc(length / length) -> number olduğu için payda birimli olmalı. */
+@supports (transform: scale(calc(100cqw / 440px))) {
+  .hero-phones-stage {
+    transform: translateX(-50%) scale(calc(100cqw / 440px));
+  }
 }
 
 /* Hero phone mockups - stronger shadow */

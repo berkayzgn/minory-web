@@ -22,7 +22,7 @@ export function TunerPage() {
         <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -z-10" />
 
         <Container fullWidth>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Phone mockup */}
             <div className="relative order-2 lg:order-1">
               <div className="absolute inset-0 bg-white/10 rounded-full blur-2xl scale-90 translate-y-8 -z-10 opacity-60" />

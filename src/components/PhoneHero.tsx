@@ -38,8 +38,8 @@ export function PhoneHero({ src, alt = "Minory Studio", className = "", variant 
 
   /* Sayfa mockup: ana sayfa kartları gibi ince siyah çerçeve, yan tuşsuz; sallanma animasyonu */
   return (
-    <div className={`relative mx-auto animate-float-front ${className}`.trim()}>
-      <div className="relative mx-auto w-[300px] h-[600px] rounded-[2.5rem] bg-black border-[6px] border-black shadow-2xl overflow-hidden">
+    <div className={`relative mx-auto animate-float-front w-full max-w-[300px] ${className}`.trim()}>
+      <div className="relative mx-auto w-full aspect-[1/2] rounded-[2.5rem] bg-black border-[6px] border-black shadow-2xl overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-24 bg-black rounded-b-xl z-10" />
         <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background-dark relative">
           <img

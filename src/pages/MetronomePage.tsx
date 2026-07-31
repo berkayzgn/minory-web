@@ -21,9 +21,9 @@ export function MetronomePage() {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-black/10 rounded-full blur-3xl -z-10 translate-x-[20%] translate-y-[20%]" />
 
         <Container fullWidth>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Content */}
-            <div className="space-y-12 order-2 lg:order-1">
+            <div className="space-y-8 order-2 lg:order-1">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
@@ -39,7 +39,7 @@ export function MetronomePage() {
                 </p>
               </div>
 
-              <div className="grid gap-10">
+              <div className="grid gap-6">
                 <div className="flex gap-5 items-start">
                   <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
                     <span className="material-icons-round text-white text-2xl">touch_app</span>

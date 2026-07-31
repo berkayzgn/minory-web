@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  APP_STORE_URL,
+  GOOGLE_PLAY_URL,
+  APP_STORE_BADGE,
+  GOOGLE_PLAY_BADGE,
+} from "../constants/storeLinks";
 
 /** Görsel yüklenirse ekranı kaplar, yoksa/404 ise arka plandaki mock arayüz görünür */
 function PhoneScreenImage({
@@ -40,20 +46,20 @@ export function HeroSection() {
         <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-[280px] h-[280px] sm:w-[500px] sm:h-[500px] bg-primary/10 rounded-full blur-[100px]" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 sm:gap-12 lg:gap-16">
-        {/* Sol: metin + CTA - mobilde flex-1 yok, üst üste binme olmaz */}
-        <div className="lg:flex-1 text-left max-w-xl pt-2 sm:pt-4 lg:pt-0 min-w-0 shrink-0">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 sm:mb-6 leading-[1.15] text-neutral-900 dark:text-white">
+      <div className="container mx-auto relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-12 xl:gap-16">
+        {/* Sol: metin + CTA */}
+        <div className="lg:flex-1 text-left max-w-xl pt-2 sm:pt-4 lg:pt-0 min-w-0 w-full">
+          <h1 className="text-[clamp(2rem,4vw+0.5rem,3.75rem)] font-extrabold tracking-tight mb-4 sm:mb-6 leading-[1.15] text-neutral-900 dark:text-white">
             {t("hero.subtitle1")}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-4">
+          <p className="text-[clamp(1rem,1.5vw+0.5rem,1.25rem)] text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-4">
             {t("featuresSection.subtitle")}
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-6">
+          <p className="text-[clamp(1rem,1.5vw+0.5rem,1.25rem)] text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-6">
             {t("hero.subtitle2")}
           </p>
           <div className="flex w-full lg:w-auto justify-center lg:justify-start text-black dark:text-black mt-2">
-            <div className="w-[4rem] h-[4rem] sm:w-[8rem] sm:h-[8rem] md:w-[9rem] md:h-[9rem] overflow-hidden rounded-full flex-shrink-0">
+            <div className="w-[clamp(4rem,14vw,9rem)] h-[clamp(4rem,14vw,9rem)] overflow-hidden rounded-full flex-shrink-0">
               <img
                 src="/image.png"
                 alt="Minory Studio"
@@ -61,15 +67,43 @@ export function HeroSection() {
               />
             </div>
           </div>
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 mt-5 sm:mt-6">
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-90 transition-opacity"
+            >
+              <img
+                src={APP_STORE_BADGE}
+                alt={t("hero.ctaAppStore")}
+                className="block h-11 sm:h-12 w-auto"
+              />
+            </a>
+            <a
+              href={GOOGLE_PLAY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-90 transition-opacity"
+            >
+              <img
+                src={GOOGLE_PLAY_BADGE}
+                alt={t("hero.ctaGooglePlay")}
+                className="block h-11 sm:h-12 w-auto"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* Sağ: Telefon mock'ları - mobilde touch sayfa scroll'una gitsin, lg'de flex-1 */}
-        <div className="lg:flex-1 relative w-full max-w-[280px] sm:max-w-xl lg:max-w-2xl mx-auto lg:mx-0 h-[360px] sm:h-[440px] md:h-[520px] lg:h-[580px] flex justify-center items-start perspective-1000 overflow-visible touch-pan-y">
-          <div className="relative w-[260px] sm:w-[320px] sm:translate-x-8 md:translate-x-12 lg:translate-x-20 pointer-events-none md:pointer-events-auto">
-          {/* Back Phone (Dark Mode) */}
-          <div className="absolute z-10 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black hero-phone-shadow animate-float-back overflow-hidden translate-x-[-70px] translate-y-6 sm:translate-x-[-90px] sm:translate-y-7 md:translate-x-[-110px] md:translate-y-8 lg:translate-x-[-120px] lg:translate-y-8">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-14 sm:h-5 sm:w-20 bg-black rounded-b-lg sm:rounded-b-xl z-20" />
-            <div className="w-full h-[340px] sm:h-[420px] md:h-[500px] lg:h-[560px] bg-neutral-900 relative">
+        {/* Sağ: Telefon mock'ları — sabit tasarım boyutu, viewport ile orantılı ölçeklenir */}
+        <div className="lg:flex-1 w-full min-w-0 flex justify-center lg:justify-end">
+          <div className="hero-phones-viewport">
+            <div className="hero-phones-stage">
+              <div className="absolute inset-0 pointer-events-none lg:pointer-events-auto">
+          {/* Back Phone (Dark Mode) — konum left/top ile: float animasyonu transform'u ezdiği için translate kullanılamaz */}
+          <div className="absolute z-10 left-4 top-16 w-[220px] rounded-[2.5rem] bg-black border-[6px] border-black hero-phone-shadow animate-float-back overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-20 bg-black rounded-b-xl z-20" />
+            <div className="w-full h-[500px] bg-neutral-900 relative">
               <PhoneScreenImage src={HERO_PHONE_DARK_IMAGE} alt="Minory Studio dark" className="absolute inset-0 w-full h-full object-cover object-top" />
               <div className="absolute inset-0 overflow-y-auto z-0">
                 <div className="p-6 pt-12 flex justify-between items-center text-white">
@@ -126,9 +160,9 @@ export function HeroSection() {
           </div>
 
           {/* Front Phone (Light Mode) */}
-          <div className="absolute z-20 w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] rounded-[2rem] sm:rounded-[2.5rem] bg-black border-[4px] sm:border-[6px] border-black hero-phone-shadow animate-float-front overflow-hidden left-1/2 -translate-x-1/2">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-14 sm:h-5 sm:w-20 bg-black rounded-b-lg sm:rounded-b-xl z-20" />
-            <div className="w-full h-[340px] sm:h-[420px] md:h-[500px] lg:h-[560px] bg-background-light relative">
+          <div className="absolute z-20 left-[156px] top-1 w-[260px] rounded-[2.5rem] bg-black border-[6px] border-black hero-phone-shadow animate-float-front overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-20 bg-black rounded-b-xl z-20" />
+            <div className="w-full h-[560px] bg-background-light relative">
               <PhoneScreenImage src={HERO_PHONE_LIGHT_IMAGE} alt="Minory Studio light" className="absolute inset-0 w-full h-full object-cover object-top" />
               <div className="absolute inset-0 overflow-y-auto z-0">
               <div className="p-6 pt-12">
@@ -191,6 +225,8 @@ export function HeroSection() {
               </div>
             </div>
           </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

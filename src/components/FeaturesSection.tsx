@@ -3,6 +3,12 @@ import { useTranslation } from "react-i18next";
 import { FEATURES, featureImages } from "../constants/features";
 import ScrollReveal from "./ScrollReveal";
 import { PhoneHero } from "./PhoneHero";
+import {
+  APP_STORE_URL,
+  GOOGLE_PLAY_URL,
+  APP_STORE_BADGE,
+  GOOGLE_PLAY_BADGE,
+} from "../constants/storeLinks";
 
 export function FeaturesSection() {
   const { t } = useTranslation();
@@ -54,10 +60,10 @@ export function FeaturesSection() {
                   key={key}
                   id={`feature-${key}`}
                   to={path}
-                  className={`feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col h-[500px] cursor-pointer${isLastOdd ? " md:col-span-2 md:max-w-[calc(50%-1.25rem)] md:mx-auto md:w-full" : ""}`}
+                  className={`feature-card group/card relative bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-neutral-200 dark:border-neutral-800 flex flex-col min-h-[460px] sm:min-h-[500px] cursor-pointer${isLastOdd ? " md:col-span-2 md:max-w-[calc(50%-1.25rem)] md:mx-auto md:w-full" : ""}`}
                   aria-label={`${t(`featuresSection.${key}.title`)} — ${t(`featuresSection.${key}.learnMore`)}`}
                 >
-                  <div className="p-8 lg:p-10 flex flex-col h-full relative z-20 max-w-[50%] min-w-0">
+                  <div className="p-6 sm:p-8 lg:p-10 flex flex-col flex-1 relative z-20 w-full sm:max-w-[55%] min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
                       <span className="material-icons-round text-2xl">{icon}</span>
                     </div>
@@ -92,19 +98,29 @@ export function FeaturesSection() {
                 <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base max-w-xl mx-auto leading-snug">
                   {t("featuresSection.ctaSubtitle")}
                 </p>
-                <div className="flex justify-center">
+                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-1">
                   <a
-                    href="https://apps.apple.com/tr/app/minory/id6758581928?l=tr"
+                    href={APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block hover:opacity-90 transition-opacity [&>img]:block"
+                    className="inline-block hover:opacity-90 transition-opacity"
                   >
                     <img
-                      src="/download-on-the-app-store-apple-logo.svg"
-                      alt={t("featuresSection.ctaDownload")}
-                      width={540}
-                      height={540}
-                      className="h-28 sm:h-32 md:h-36 w-auto"
+                      src={APP_STORE_BADGE}
+                      alt={t("hero.ctaAppStore")}
+                      className="block h-11 sm:h-12 w-auto"
+                    />
+                  </a>
+                  <a
+                    href={GOOGLE_PLAY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block hover:opacity-90 transition-opacity"
+                  >
+                    <img
+                      src={GOOGLE_PLAY_BADGE}
+                      alt={t("hero.ctaGooglePlay")}
+                      className="block h-11 sm:h-12 w-auto"
                     />
                   </a>
                 </div>

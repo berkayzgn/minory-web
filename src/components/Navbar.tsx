@@ -68,8 +68,8 @@ export function Navbar() {
             height={40}
             className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
           />
-          <span className={`font-bold text-lg sm:text-xl tracking-tight flex items-center gap-1 whitespace-nowrap ${logoText}`}>
-            {t("nav.brand")}{" "}
+          <span className={`font-bold text-base sm:text-lg xl:text-xl tracking-tight flex items-center gap-1 min-w-0 ${logoText}`}>
+            <span className="truncate max-w-[9rem] sm:max-w-none">{t("nav.brand")}</span>{" "}
             <TextType
               as="span"
               text={[t("hero.titleStudio")]}
@@ -80,7 +80,7 @@ export function Navbar() {
               cursorCharacter="_"
               cursorBlinkDuration={0.5}
               loop
-              className={`font-bold text-lg sm:text-xl tracking-tight ${accentText}`}
+              className={`font-bold text-base sm:text-lg xl:text-xl tracking-tight ${accentText}`}
             />
           </span>
         </Link>
@@ -88,8 +88,8 @@ export function Navbar() {
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Desktop nav — sağda */}
-        <div className="hidden lg:flex items-center gap-1 sm:gap-2">
+        {/* Desktop nav — xl ve üzeri; lg aralığında hamburger */}
+        <div className="hidden xl:flex items-center gap-1">
           <Link
             to={ROUTES.home}
             className={`inline-flex text-sm font-medium transition-colors py-2 px-3 ${
@@ -116,7 +116,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen((o) => !o)}
-            className={`lg:hidden p-2 rounded-full min-w-[44px] min-h-[44px] flex items-center justify-center ${hamburgerClass}`}
+            className={`xl:hidden p-2 rounded-full min-w-[44px] min-h-[44px] flex items-center justify-center ${hamburgerClass}`}
             aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={mobileMenuOpen}
           >
@@ -138,7 +138,7 @@ export function Navbar() {
             aria-label={i18n.language === "en" ? "Türkçe'ye geç" : "Switch to English"}
           >
             <span className="material-icons-round text-xl sm:text-2xl">language</span>
-            <span className="hidden lg:inline text-xs font-semibold uppercase tabular-nums">
+            <span className="hidden xl:inline text-xs font-semibold uppercase tabular-nums">
               {i18n.language === "en" ? "EN" : "TR"}
             </span>
           </button>
@@ -147,7 +147,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 z-50 shadow-lg overflow-hidden transition-[max-height,opacity] duration-200 ease-out ${mobileMenuBg} ${
+        className={`xl:hidden absolute top-full left-0 right-0 z-50 shadow-lg overflow-hidden transition-[max-height,opacity] duration-200 ease-out ${mobileMenuBg} ${
           mobileMenuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         }`}
         aria-hidden={!mobileMenuOpen}
