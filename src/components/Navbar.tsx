@@ -1,6 +1,11 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import {
+  alternateChordPath,
+  explorerEntryPath,
+  isChordsPath,
+} from "../constants/chordRoutes";
 import { ROUTES } from "../constants/routes";
 import { FEATURES } from "../constants/features";
 import TextType from "./TextType";
@@ -11,6 +16,17 @@ const LANG_KEY = "minory-lang";
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
+  const locale = i18n.language === "tr" ? "tr" : "en";
+
+  /**
+   * Akor bağlantısı doğrudan explorer'ın içine gider — kullanıcıya
+   * önce enstrüman seçtiren ara adım yok.
+   */
+  const featureLink = (key: string, path: string) =>
+    key === "chords" ? explorerEntryPath(locale) : path;
+  const featureActive = (key: string, path: string) =>
+    key === "chords" ? isChordsPath(location.pathname) : location.pathname === path;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isColored } = usePageAccentContext();
 
@@ -18,6 +34,13 @@ export function Navbar() {
     const next = i18n.language === "en" ? "tr" : "en";
     i18n.changeLanguage(next);
     localStorage.setItem(LANG_KEY, next);
+
+    // Akor sayfalarında dilin kaynağı adres olduğu için karşılığına git;
+    // aksi halde useRouteLocale dili anında geri çevirirdi.
+    const alternate = alternateChordPath(location.pathname, next);
+    if (alternate && alternate !== location.pathname) {
+      navigate(alternate);
+    }
   };
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -101,9 +124,9 @@ export function Navbar() {
           {FEATURES.map(({ key, path }) => (
             <Link
               key={key}
-              to={path}
+              to={featureLink(key, path)}
               className={`inline-flex text-sm font-medium transition-colors py-2 px-3 ${
-                location.pathname === path ? linkActive : linkBase
+                featureActive(key, path) ? linkActive : linkBase
               }`}
             >
               {t(`nav.${key === "chords" ? "chordsLibrary" : key}`)}
@@ -163,8 +186,8 @@ export function Navbar() {
           {FEATURES.map(({ key, path }) => (
             <Link
               key={key}
-              to={path}
-              className={navLinkClass(location.pathname === path)}
+              to={featureLink(key, path)}
+              className={navLinkClass(featureActive(key, path))}
               onClick={closeMobileMenu}
             >
               {t(`nav.${key === "chords" ? "chordsLibrary" : key}`)}

@@ -8,7 +8,12 @@ const resources = {
   tr: { translation: tr },
 };
 
-const savedLanguage = localStorage.getItem("minory-lang") as "en" | "tr" | null;
+// Prerender sırasında Node'da çalıştığı için localStorage/document erişimi korumalı
+const isBrowser = typeof window !== "undefined";
+
+const savedLanguage = isBrowser
+  ? (localStorage.getItem("minory-lang") as "en" | "tr" | null)
+  : null;
 const initialLang = savedLanguage && (savedLanguage === "en" || savedLanguage === "tr") ? savedLanguage : "en";
 
 i18n.use(initReactI18next).init({
@@ -21,6 +26,7 @@ i18n.use(initReactI18next).init({
 });
 
 function setDocumentLang(lng: string) {
+  if (!isBrowser) return;
   document.documentElement.lang = lng === "tr" ? "tr" : "en";
 }
 setDocumentLang(initialLang);
